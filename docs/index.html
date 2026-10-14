@@ -1,26 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Custom Hanger Configurator — Coming Soon</title>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cabinet Hanger Configurator</title>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.170.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.170.0/examples/jsm/"}}</script>
 <style>
-  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #faf7f2; color: #2b2620; }
-  main { max-width: 640px; margin: 12vh auto; padding: 0 24px; text-align: center; }
-  h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-  p { line-height: 1.6; }
-  .status { display: inline-block; margin-top: 1rem; padding: 0.4rem 1rem; border: 1px solid #c9bfae; border-radius: 999px; font-size: 0.9rem; background: #fff; }
-  .note { margin-top: 2rem; font-size: 0.85rem; color: #6b6257; }
-</style>
-</head>
-<body>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2230;--mute:#6b7384;--line:#e2e5ec;--acc:#2f6fed;--err:#c62f3b;--warn:#9a6a00}
+@media(prefers-color-scheme:dark){:root{--bg:#14171d;--card:#1d2129;--ink:#e8ebf2;--mute:#99a1b3;--line:#2c323d;--acc:#6a9bff;--err:#ff7b86;--warn:#e3b341}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:18px 20px 6px}h1{font-size:20px;margin:0}header p{margin:2px 0 0;color:var(--mute);font-size:13px}
+main{display:grid;grid-template-columns:320px 1fr;gap:16px;padding:14px 20px 24px;max-width:1100px;margin:auto}
+@media(max-width:760px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+label{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:12px}
+.row{display:flex;gap:10px;align-items:center}.row input[type=range]{flex:1;accent-color:var(--acc)}
+input[type=number]{width:72px;padding:5px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.seg{display:flex;gap:6px}.seg button{flex:1;padding:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;cursor:pointer}
+.seg button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+#view{height:420px;border-radius:12px;border:1px solid var(--line);background:var(--card);position:relative;overflow:hidden}
+#view canvas{display:block;width:100%;height:100%}
+#status{position:absolute;left:10px;top:8px;font-size:12px;color:var(--mute)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:0;font-size:14px}dt{color:var(--mute)}dd{margin:0;font-variant-numeric:tabular-nums}
+.msg{font-size:13px;margin:8px 0 0}.err{color:var(--err)}.warn{color:var(--warn)}
+.small{font-size:12px;color:var(--mute);margin-top:10px}
+button.act{margin-top:8px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.side{display:flex;flex-direction:column;gap:14px}
+</style></head><body>
+<header><h1>Cabinet Hanger Configurator</h1><p>v1 prototype · all dimensions in mm · preview only, not a production file</p></header>
 <main>
-  <h1>Custom 3D-Printed Hanger Configurator</h1>
-  <p>Design your own over-the-cabinet and over-the-door hanger: choose dimensions,
-     hook configurations, and personalization, then preview the design before it's made.</p>
-  <p><span class="status">Configurator under development — check back soon.</span></p>
-  <p class="note">Product previews are rendered on our own servers.
-     Manufacturing files are never distributed through this site.</p>
+<div class="side">
+ <div class="card" id="controls"></div>
+ <div class="card"><dl id="dims"></dl><div id="msgs"></div></div>
+</div>
+<div><div id="view"><div id="status">Loading…</div></div>
+<p class="small">Preview is a coarse approximation of the geometry. Orientation: as printed (upright). Hook strength and load capacity are untested.</p>
+<div id="dev" class="card" style="display:none;margin-top:12px"><b>Developer</b>
+<div class="small" style="margin-top:2px">Generates the production STL on the server into <code>private_output/</code>. The file is never sent to the browser.</div>
+<button class="act" id="prod">Generate production STL (server-side)</button><div id="prodout" class="msg"></div></div></div>
 </main>
-</body>
-</html>
+<script type="module" src="app.js"></script>
+</body></html>
