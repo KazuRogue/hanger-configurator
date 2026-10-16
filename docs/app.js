@@ -1,1 +1,227 @@
-aW1wb3J0ICogYXMgVEhSRUUgZnJvbSAndGhyZWUnOwppbXBvcnQgeyBPcmJpdENvbnRyb2xzIH0gZnJvbSAndGhyZWUvYWRkb25zL2NvbnRyb2xzL09yYml0Q29udHJvbHMuanMnOwoKY29uc3QgRklFTERTID0gW1snZG9vcicsJ0Rvb3IgdGhpY2tuZXNzJ10sWydwcm9qZWN0aW9uJywnSG9vayBwcm9qZWN0aW9uJ10sWydzcGFjaW5nJywnSG9vayBzcGFjaW5nJ11dOwpjb25zdCBzdGF0ZSA9IHt9OyBsZXQgY2ZnLCBtZXNoLCBlZGdlcywgZnJhbWVkID0gZmFsc2UsIHRpbWVyLCBjdGw7CmNvbnN0ICQgPSBpZCA9PiBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCk7CgovLyBCYWNrZW5kIGJhc2UgVVJMIChvcHRpb24tMSBwYXRjaCBieSBNdXNlKTogP2JhY2tlbmQ9IHF1ZXJ5IHBhcmFtIHdpbnMsIHRoZW4gdGhlCi8vIHNhdmVkIHZhbHVlLCBlbHNlIHNhbWUtb3JpZ2luIChsb2NhbCBkZXYgd2hlcmUgdGhlIFB5dGhvbiBzZXJ2ZXIgc2VydmVzIHdlYi8pLgpjb25zdCBfYnEgPSBuZXcgVVJMU2VhcmNoUGFyYW1zKGxvY2F0aW9uLnNlYXJjaCk7CmxldCBCQUNLRU5EID0gX2JxLmdldCgnYmFja2VuZCcpIHx8ICcnOwp0cnkgeyBpZiAoIUJBQ0tFTkQpIEJBQ0tFTkQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnaGFuZ2VyX2JhY2tlbmQnKSB8fCAnJzsgfSBjYXRjaCAoZSkge30KaWYgKF9icS5nZXQoJ2JhY2tlbmQnKSkgeyB0cnkgeyBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnaGFuZ2VyX2JhY2tlbmQnLCBCQUNLRU5EKTsgfSBjYXRjaCAoZSkge30gfQpjb25zdCBhcGkgPSBwdGggPT4gQkFDS0VORC5yZXBsYWNlKC9cLyskLywgJycpICsgcHRoOwpkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdoZWFkZXIgcCcpLnRleHRDb250ZW50ICs9IEJBQ0tFTkQgPyAnIMK3IGJhY2tlbmQ6ICcgKyBCQUNLRU5EIDogJyDCtyBiYWNrZW5kOiBzYW1lLW9yaWdpbic7CgovLyAtLS0gdGhyZWUuanMgc2NlbmUgKFogdXAsIG1hdGNoZXMgcHJpbnQgb3JpZW50YXRpb24pIC0tLQpjb25zdCB2aWV3ID0gJCgndmlldycpOwpjb25zdCByZW5kZXJlciA9IG5ldyBUSFJFRS5XZWJHTFJlbmRlcmVyKHsgYW50aWFsaWFzOiB0cnVlLCBhbHBoYTogdHJ1ZSB9KTsKcmVuZGVyZXIuc2V0UGl4ZWxSYXRpbyhkZXZpY2VQaXhlbFJhdGlvKTsgdmlldy5hcHBlbmRDaGlsZChyZW5kZXJlci5kb21FbGVtZW50KTsKY29uc3Qgc2NlbmUgPSBuZXcgVEhSRUUuU2NlbmUoKTsKY29uc3QgY2FtZXJhID0gbmV3IFRIUkVFLlBlcnNwZWN0aXZlQ2FtZXJhKDM1LCAxLCAxLCAyMDAwKTsgY2FtZXJhLnVwLnNldCgwLCAwLCAxKTsKc2NlbmUuYWRkKG5ldyBUSFJFRS5IZW1pc3BoZXJlTGlnaHQoMHhmZmZmZmYsIDB4ODg5MGEwLCAxLjMpKTsKY29uc3Qgc3VuID0gbmV3IFRIUkVFLkRpcmVjdGlvbmFsTGlnaHQoMHhmZmZmZmYsIDEuNik7IHN1bi5wb3NpdGlvbi5zZXQoMTUwLCAtMjAwLCAzMDApOyBzY2VuZS5hZGQoc3VuKTsKY29uc3QgZ3JpZCA9IG5ldyBUSFJFRS5HcmlkSGVscGVyKDMwMCwgMzAsIDB4OTlhLCAweGNjZCk7IGdyaWQucm90YXRpb24ueCA9IE1hdGguUEkgLyAyOyBncmlkLm1hdGVyaWFsLnRyYW5zcGFyZW50ID0gdHJ1ZTsgZ3JpZC5tYXRlcmlhbC5vcGFjaXR5ID0gLjM1OyBzY2VuZS5hZGQoZ3JpZCk7CmNvbnN0IGNvbnRyb2xzID0gbmV3IE9yYml0Q29udHJvbHMoY2FtZXJhLCByZW5kZXJlci5kb21FbGVtZW50KTsgY29udHJvbHMuZW5hYmxlRGFtcGluZyA9IHRydWU7CmZ1bmN0aW9uIHJlc2l6ZSgpIHsgY29uc3QgdyA9IHZpZXcuY2xpZW50V2lkdGgsIGggPSB2aWV3LmNsaWVudEhlaWdodDsgcmVuZGVyZXIuc2V0U2l6ZSh3LCBoLCBmYWxzZSk7IGNhbWVyYS5hc3BlY3QgPSB3IC8gaDsgY2FtZXJhLnVwZGF0ZVByb2plY3Rpb25NYXRyaXgoKTsgfQphZGRFdmVudExpc3RlbmVyKCdyZXNpemUnLCByZXNpemUpOyByZXNpemUoKTsKKGZ1bmN0aW9uIGxvb3AoKSB7IGNvbnRyb2xzLnVwZGF0ZSgpOyByZW5kZXJlci5yZW5kZXIoc2NlbmUsIGNhbWVyYSk7IHJlcXVlc3RBbmltYXRpb25GcmFtZShsb29wKTsgfSkoKTsKCmZ1bmN0aW9uIHNob3dNZXNoKHBvcywgZmFkZWQpIHsKICBpZiAoIXBvcykgeyBpZiAobWVzaCkgbWVzaC5tYXRlcmlhbC5vcGFjaXR5ID0gLjI1OyByZXR1cm47IH0KICBjb25zdCBnID0gbmV3IFRIUkVFLkJ1ZmZlckdlb21ldHJ5KCk7IGcuc2V0QXR0cmlidXRlKCdwb3NpdGlvbicsIG5ldyBUSFJFRS5GbG9hdDMyQnVmZmVyQXR0cmlidXRlKHBvcywgMykpOwogIGcuY29tcHV0ZVZlcnRleE5vcm1hbHMoKTsgZy5jb21wdXRlQm91bmRpbmdCb3goKTsKICBjb25zdCBjID0gbmV3IFRIUkVFLlZlY3RvcjMoKTsgZy5ib3VuZGluZ0JveC5nZXRDZW50ZXIoYyk7IGcudHJhbnNsYXRlKC1jLngsIC1jLnksIDApOwogIGlmIChtZXNoKSB7IHNjZW5lLnJlbW92ZShtZXNoLCBlZGdlcyk7IG1lc2guZ2VvbWV0cnkuZGlzcG9zZSgpOyB9CiAgbWVzaCA9IG5ldyBUSFJFRS5NZXNoKGcsIG5ldyBUSFJFRS5NZXNoU3RhbmRhcmRNYXRlcmlhbCh7IGNvbG9yOiAweDRhNzhkNiwgcm91Z2huZXNzOiAuNTUsIG1ldGFsbmVzczogLjA1LCB0cmFuc3BhcmVudDogdHJ1ZSwgb3BhY2l0eTogMSB9KSk7CiAgZWRnZXMgPSBuZXcgVEhSRUUuTGluZVNlZ21lbnRzKG5ldyBUSFJFRS5FZGdlc0dlb21ldHJ5KGcsIDM1KSwgbmV3IFRIUkVFLkxpbmVCYXNpY01hdGVyaWFsKHsgY29sb3I6IDB4MWQzYTc4LCB0cmFuc3BhcmVudDogdHJ1ZSwgb3BhY2l0eTogLjQ1IH0pKTsKICBzY2VuZS5hZGQobWVzaCwgZWRnZXMpOwogIGlmICghZnJhbWVkKSB7IGNvbnN0IHMgPSBnLmJvdW5kaW5nQm94LmdldFNpemUobmV3IFRIUkVFLlZlY3RvcjMoKSk7IGNvbnN0IHIgPSBNYXRoLm1heChzLngsIHMueSwgcy56KTsKICAgIGNhbWVyYS5wb3NpdGlvbi5zZXQociAqIDEuNiwgLXIgKiAyLjIsIHIgKiAxLjMpOyBjb250cm9scy50YXJnZXQuc2V0KDAsIDAsIHMueiAvIDIpOyBmcmFtZWQgPSB0cnVlOyB9Cn0KCi8vIC0tLSBVSSAtLS0KZnVuY3Rpb24gYnVpbGQoKSB7CiAgY29uc3QgYm94ID0gJCgnY29udHJvbHMnKTsgbGV0IGggPSAnPGRpdiBzdHlsZT0iZm9udC1zaXplOjEzcHg7Y29sb3I6dmFyKC0tbXV0ZSkiPkhvb2tzPC9kaXY+PGRpdiBjbGFzcz0ic2VnIiBpZD0iaG9va3MiPicgKwogICAgWzEsMiwzXS5tYXAobiA9PiBgPGJ1dHRvbiBkYXRhLW49IiR7bn0iPiR7bn08L2J1dHRvbj5gKS5qb2luKCcnKSArICc8L2Rpdj4nOwogIGZvciAoY29uc3QgW2ssIGxhYmVsXSBvZiBGSUVMRFMpIHsgY29uc3QgW2xvLCBoaV0gPSBjZmcubGltaXRzW2tdOwogICAgaCArPSBgPGxhYmVsPjxzcGFuPiR7bGFiZWx9PC9zcGFuPjxzcGFuPiR7bG994oCTJHtoaX0gbW08L3NwYW4+PC9sYWJlbD48ZGl2IGNsYXNzPSJyb3ciPjxpbnB1dCB0eXBlPSJyYW5nZSIgaWQ9InJfJHtrfSIgbWluPSIke2xvfSIgbWF4PSIke2hpfSIgc3RlcD0iMC41Ij48aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0ibl8ke2t9IiBtaW49IiR7bG99IiBtYXg9IiR7aGl9IiBzdGVwPSIwLjUiPjwvZGl2PmA7IH0KICBib3guaW5uZXJIVE1MID0gaDsKICBmb3IgKGNvbnN0IFtrXSBvZiBGSUVMRFMpIHsKICAgIGZvciAoY29uc3QgdCBvZiBbJ3InLCAnbiddKSAkKGAke3R9XyR7a31gKS5hZGRFdmVudExpc3RlbmVyKCdpbnB1dCcsIGUgPT4geyBzdGF0ZVtrXSA9IGUudGFyZ2V0LnZhbHVlOyBzeW5jKCk7IHNjaGVkdWxlKCk7IH0pOwogIH0KICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcjaG9va3MgYnV0dG9uJykuZm9yRWFjaChiID0+IGIub25jbGljayA9ICgpID0+IHsgc3RhdGUuaG9va3MgPSArYi5kYXRhc2V0Lm47IHN5bmMoKTsgc2NoZWR1bGUoKTsgfSk7CiAgc3luYygpOwp9CmZ1bmN0aW9uIHN5bmMoKSB7CiAgZm9yIChjb25zdCBba10gb2YgRklFTERTKSB7ICQoYHJfJHtrfWApLnZhbHVlID0gc3RhdGVba107IGlmIChkb2N1bWVudC5hY3RpdmVFbGVtZW50ICE9PSAkKGBuXyR7a31gKSkgJChgbl8ke2t9YCkudmFsdWUgPSBzdGF0ZVtrXTsgfQogIGZvciAoY29uc3QgayBvZiBbJ3Jfc3BhY2luZycsICduX3NwYWNpbmcnXSkgJChrKS5kaXNhYmxlZCA9IHN0YXRlLmhvb2tzID09IDE7CiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnI2hvb2tzIGJ1dHRvbicpLmZvckVhY2goYiA9PiBiLmNsYXNzTGlzdC50b2dnbGUoJ29uJywgK2IuZGF0YXNldC5uID09IHN0YXRlLmhvb2tzKSk7Cn0KY29uc3Qgc2NoZWR1bGUgPSAoKSA9PiB7IGNsZWFyVGltZW91dCh0aW1lcik7IHRpbWVyID0gc2V0VGltZW91dChyZWZyZXNoLCAyMDApOyB9OwpsZXQgaW5mbGlnaHQ7CmFzeW5jIGZ1bmN0aW9uIHJlZnJlc2goKSB7CiAgaW5mbGlnaHQ/LmFib3J0KCk7IGluZmxpZ2h0ID0gbmV3IEFib3J0Q29udHJvbGxlcigpOyAkKCdzdGF0dXMnKS50ZXh0Q29udGVudCA9ICdHZW5lcmF0aW5n4oCmJzsKICB0cnkgewogICAgY29uc3QgciA9IGF3YWl0IGZldGNoKGFwaSgnL2FwaS9wcmV2aWV3PycpICsgbmV3IFVSTFNlYXJjaFBhcmFtcyhzdGF0ZSksIHsgc2lnbmFsOiBpbmZsaWdodC5zaWduYWwgfSk7IGNvbnN0IGogPSBhd2FpdCByLmpzb24oKTsKICAgICQoJ21zZ3MnKS5pbm5lckhUTUwgPSBqLmVycm9ycy5tYXAoZSA9PiBgPGRpdiBjbGFzcz0ibXNnIGVyciI+4pyVICR7ZX08L2Rpdj5gKS5qb2luKCcnKSArIGoud2FybmluZ3MubWFwKHcgPT4gYDxkaXYgY2xhc3M9Im1zZyB3YXJuIj7imqAgJHt3fTwvZGl2PmApLmpvaW4oJycpOwogICAgY29uc3QgZCA9IGouZGltcywgZW52ID0gY2ZnLmVudmVsb3BlOwogICAgJCgnZGltcycpLmlubmVySFRNTCA9IGQgPyBgPGR0PkRlcHRoIChYKTwvZHQ+PGRkPiR7ZC54fSBtbTwvZGQ+PGR0PldpZHRoIChZKTwvZHQ+PGRkPiR7ZC55fSBtbTwvZGQ+PGR0PkhlaWdodCAoWik8L2R0PjxkZD4ke2Quen0gbW08L2RkPjxkdD5Eb29yIHNsb3Q8L2R0PjxkZD4ke2Quc2xvdH0gbW08L2RkPjxkdD5FbnZlbG9wZTwvZHQ+PGRkPiR7TWF0aC5tYXgoZC54LCBkLnksIGQueikgPD0gZW52ID8gJ+KckyBmaXRzJyA6ICfinJUgZXhjZWVkcyd9ICR7ZW52fSBtbTwvZGQ+YCA6ICc8ZHQ+RGltZW5zaW9uczwvZHQ+PGRkPuKAlDwvZGQ+JzsKICAgIGlmIChqLm9rKSB7IHNob3dNZXNoKGoucG9zaXRpb25zKTsgJCgnc3RhdHVzJykudGV4dENvbnRlbnQgPSAnJzsgfSBlbHNlIHsgc2hvd01lc2gobnVsbCk7ICQoJ3N0YXR1cycpLnRleHRDb250ZW50ID0gJ0ludmFsaWQgY29uZmlndXJhdGlvbic7IH0KICB9IGNhdGNoIChlKSB7IGlmIChlLm5hbWUgIT09ICdBYm9ydEVycm9yJykgJCgnc3RhdHVzJykudGV4dENvbnRlbnQgPSAnU2VydmVyIGVycm9yJzsgfQp9CgpjZmcgPSBhd2FpdCAoYXdhaXQgZmV0Y2goYXBpKCcvYXBpL2NvbmZpZycpKSkuanNvbigpOyBPYmplY3QuYXNzaWduKHN0YXRlLCBjZmcuZGVmYXVsdHMpOyBidWlsZCgpOyByZWZyZXNoKCk7CmlmIChjZmcucHJvZHVjdGlvbl9lbmFibGVkKSB7ICQoJ2RldicpLnN0eWxlLmRpc3BsYXkgPSAnJzsKICAkKCdwcm9kJykub25jbGljayA9IGFzeW5jICgpID0+IHsgJCgncHJvZG91dCcpLnRleHRDb250ZW50ID0gJ0dlbmVyYXRpbmfigKYnOwogICAgY29uc3QgciA9IGF3YWl0IGZldGNoKGFwaSgnL2FwaS9wcm9kdWN0aW9uJyksIHsgbWV0aG9kOiAnUE9TVCcsIGJvZHk6IEpTT04uc3RyaW5naWZ5KHN0YXRlKSB9KTsgY29uc3QgaiA9IGF3YWl0IHIuanNvbigpOwogICAgJCgncHJvZG91dCcpLmlubmVySFRNTCA9IGoub2sgPyBgU2F2ZWQgcHJpdmF0ZWx5OiA8Y29kZT4ke2oucHJpdmF0ZV9maWxlLmZpbGV9PC9jb2RlPiDCtyAke2oucHJpdmF0ZV9maWxlLnNpemVfbW0uam9pbignIMOXICcpfSBtbSDCtyAke2oucHJpdmF0ZV9maWxlLnRyaWFuZ2xlc30gdHJpcyDCtyB3YXRlcnRpZ2h0ICR7ai5wcml2YXRlX2ZpbGUud2F0ZXJ0aWdodH0gwrcgc2hhICR7ai5wcml2YXRlX2ZpbGUuc2hhMjU2fWAgOiBgPHNwYW4gY2xhc3M9ImVyciI+JHtqLmVycm9ycy5qb2luKCc7ICcpfTwvc3Bhbj5gOyB9OyB9Cg==
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import * as L from './logic.js';
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+// ---------- backend selection: ?backend= overrides, then saved value, then same origin ----------
+const BKEY = 'hanger.backend';
+const OLDKEY = 'hanger_backend';   // v1 key, read-only fallback
+const store = { get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
+                set: (k, v) => { try { localStorage.setItem(k, v); } catch {} }, del: (k) => { try { localStorage.removeItem(k); } catch {} } };
+function resolveBackend() {
+  const q = new URLSearchParams(location.search).get('backend');
+  if (q !== null) { const v = q.trim().replace(/\/+$/, ''); if (v) store.set(BKEY, v); else store.del(BKEY); return v; }   // ?backend= (empty) clears
+  return store.get(BKEY) || store.get(OLDKEY) || '';
+}
+const BACKEND = resolveBackend();
+const api = (path, opts) => fetch(BACKEND + path, opts);
+$('backend').textContent = BACKEND ? `Backend: ${BACKEND}` : 'Backend: this site';
+
+// ---------- units: mm | in (internal state is always mm) ----------
+const U = {
+  unit: (() => { try { return localStorage.getItem('hanger.unit') || 'mm'; } catch { return 'mm'; } })(),
+  fmt(mm) { const v = +mm; return this.unit === 'in' ? (v / 25.4).toFixed(2) + ' in' : v.toFixed(1).replace(/\.0$/, '') + ' mm'; },
+  fmtNum(mm) { const v = +mm; return this.unit === 'in' ? (v / 25.4).toFixed(2) : String(v); },
+  toMM(v) { const n = parseFloat(v); return this.unit === 'in' && Number.isFinite(n) ? n * 25.4 : n; },
+  set(u) { this.unit = u; try { localStorage.setItem('hanger.unit', u); } catch {} },
+};
+function syncUnitButtons() {
+  $('unit-mm').setAttribute('aria-pressed', String(U.unit === 'mm'));
+  $('unit-in').setAttribute('aria-pressed', String(U.unit === 'in'));
+}
+$('unit-mm').onclick = () => { U.set('mm'); syncUnitButtons(); buildCabinet(); buildOverDoor(); selectTab(S.tab); };
+$('unit-in').onclick = () => { U.set('in'); syncUnitButtons(); buildCabinet(); buildOverDoor(); selectTab(S.tab); };
+syncUnitButtons();
+
+// ---------- 3D view (Z up). Mesh JSON only; never a production file ----------
+const view = $('view');
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2)); view.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, 1, 1, 6000); camera.up.set(0, 0, 1);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8890a0, 1.3));
+const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(150, -200, 300); scene.add(sun);
+const grid = new THREE.GridHelper(1200, 60, 0x99a, 0xccd); grid.rotation.x = Math.PI / 2; grid.material.transparent = true; grid.material.opacity = .3; scene.add(grid);
+const controls = new OrbitControls(camera, renderer.domElement); controls.enableDamping = true;
+function resize() { const w = view.clientWidth, h = view.clientHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+addEventListener('resize', resize); resize();
+(function loop() { controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop); })();
+
+let mesh = null, edges = null, reframe = true;
+function clearMesh() { if (mesh) { scene.remove(mesh, edges); mesh.geometry.dispose(); mesh = edges = null; } }
+function showMesh(pos, { flipToUse = false } = {}) {
+  const p = Float32Array.from(pos);
+  if (flipToUse) for (let i = 0; i < p.length; i += 3) { p[i + 1] = -p[i + 1]; p[i + 2] = -p[i + 2]; }   // as-printed -> as-used (rotate 180° about X)
+  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(p, 3));
+  g.computeVertexNormals(); g.computeBoundingBox();
+  const c = g.boundingBox.getCenter(new THREE.Vector3()), s = g.boundingBox.getSize(new THREE.Vector3());
+  g.translate(-c.x, -c.y, -g.boundingBox.min.z); g.computeBoundingBox();
+  clearMesh();
+  mesh = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: 0x4a78d6, roughness: .55, metalness: .05 }));
+  edges = new THREE.LineSegments(new THREE.EdgesGeometry(g, 35), new THREE.LineBasicMaterial({ color: 0x1d3a78, transparent: true, opacity: .45 }));
+  scene.add(mesh, edges);
+  if (reframe) {
+    const r = Math.max(s.x, s.y, s.z), tall = s.z > 2 * Math.max(s.x, s.y);
+    camera.position.set(r * (tall ? 1.1 : 1.6), -r * (tall ? 1.6 : 2.2), r * (tall ? 0.65 : 1.3)); controls.target.set(0, 0, s.z / 2); reframe = false;
+  }
+}
+const fadeMesh = (on) => { if (mesh) { mesh.material.transparent = true; mesh.material.opacity = on ? .25 : 1; } };
+
+// ---------- preview loading (debounced by callers, abortable, stale-safe) ----------
+let inflight = null, seq = 0;
+async function loadPreview(path, opts = {}) {
+  inflight?.abort(); inflight = new AbortController(); const mine = ++seq;
+  $('status').textContent = 'Generating…';
+  try {
+    const r = await api(path, { signal: inflight.signal }); const j = await r.json(); if (mine !== seq) return;
+    renderMessages(j); renderDims(j.dims);
+    const chk = L.checkPreview(j);
+    if (chk.ok) { showMesh(j.positions, opts); fadeMesh(false); $('status').textContent = ''; }
+    else { fadeMesh(true); $('status').textContent = 'Preview unavailable'; if (!(j.errors || []).length) addMsg('err', chk.problem); }
+  } catch (e) { if (e.name !== 'AbortError') { fadeMesh(true); $('status').textContent = 'Could not reach the server'; addMsg('err', `Could not reach the backend (${BACKEND || 'this site'}).`); } }
+}
+const timers = {};
+const debounced = (key, fn, ms = 200) => { clearTimeout(timers[key]); timers[key] = setTimeout(fn, ms); };
+function renderMessages(j) { $('msgs').innerHTML = (j.errors || []).map((e) => `<div class="msg err">✕ ${esc(e)}</div>`).join('') + (j.warnings || []).map((w) => `<div class="msg warn">⚠ ${esc(w)}</div>`).join(''); }
+const addMsg = (cls, t) => { $('msgs').insertAdjacentHTML('beforeend', `<div class="msg ${cls}">${cls === 'err' ? '✕' : '⚠'} ${esc(t)}</div>`); };
+function renderDims(d) {
+  $('dims').innerHTML = d ? ['x', 'y', 'z'].filter((k) => d[k] != null).map((k, i) => `<dt>${['Depth', 'Width', 'Height'][i]}</dt><dd>${U.fmt(d[k])}</dd>`).join('') + (d.slot != null ? `<dt>Door slot</dt><dd>${U.fmt(d.slot)}</dd>` : '') : '';
+}
+const setOrder = (text, cta) => { $('order').textContent = text || ''; const b = $('cta'); b.disabled = !cta; b.textContent = cta || 'Choose a size'; };
+$('cta').onclick = () => { $('cta-note').textContent = `Checkout isn't connected yet (needs the Teleport/Etsy integration). You chose: ${$('order').textContent}.`; };
+
+// ---------- state ----------
+let cat = null; const S = { tab: 'cabinet', cab: {}, od: { door: null, mode: 'onepiece', rails: 2, pegs: [] } };
+
+// ---------- Cabinet tab ----------
+const CAB_FIELDS = [['door', 'Your door thickness'], ['projection', 'Hook projection'], ['spacing', 'Hook spacing']];
+function buildCabinet() {
+  const lim = cat.cabinet.limits; if (!lim) { $('cab-controls').innerHTML = '<p class="small">Controls unavailable.</p>'; return; }
+  Object.assign(S.cab, cat.cabinet.defaults);
+  let h = '<div style="font-size:14px;color:var(--mute)">Hooks</div><div class="seg" id="cab-hooks">' +
+    Array.from({ length: lim.hooks[1] - lim.hooks[0] + 1 }, (_, i) => `<button data-n="${lim.hooks[0] + i}">${lim.hooks[0] + i}</button>`).join('') + '</div>';
+  for (const [k, label] of CAB_FIELDS) { const [lo, hi] = lim[k];
+    h += `<label for="cn_${k}"><span>${label}</span><span>${U.fmt(lo)}–${U.fmt(hi)}</span></label><div class="row"><input type="range" id="cr_${k}" min="${lo}" max="${hi}" step="0.1" aria-label="${label} slider"><input type="number" id="cn_${k}" min="${U.fmtNum(lo)}" max="${U.fmtNum(hi)}" step="${U.unit === 'in' ? '0.05' : '0.1'}" inputmode="decimal"></div>`; }
+  $('cab-controls').innerHTML = h;
+  for (const [k] of CAB_FIELDS) for (const t of ['cr', 'cn']) $(`${t}_${k}`).addEventListener('input', (e) => { S.cab[k] = t === 'cn' ? U.toMM(e.target.value) : +e.target.value; syncCabinet(); onCabinetChange(); });
+  document.querySelectorAll('#cab-hooks button').forEach((b) => b.onclick = () => { S.cab.hooks = +b.dataset.n; syncCabinet(); onCabinetChange(); });
+  syncCabinet();
+}
+function syncCabinet() {
+  // Envelope guard: cap hook spacing so the width never exceeds the print envelope.
+  const smax = cat.cabinet.parametric && cat.cabinet.parametric.spacing_max_by_hooks;
+  const hooks = +S.cab.hooks;
+  if (smax && hooks > 1 && smax[String(hooks)] != null) {
+    const cap = +smax[String(hooks)];
+    if (+S.cab.spacing > cap) S.cab.spacing = cap;
+    for (const t of ['cr', 'cn']) $(`${t}_spacing`).max = cap;
+  }
+  for (const [k] of CAB_FIELDS) { $(`cr_${k}`).value = S.cab[k]; if (document.activeElement !== $(`cn_${k}`)) $(`cn_${k}`).value = U.fmtNum(S.cab[k]); }
+  for (const k of ['cr_spacing', 'cn_spacing']) $(k).disabled = +S.cab.hooks === 1;
+  document.querySelectorAll('#cab-hooks button').forEach((b) => b.classList.toggle('on', +b.dataset.n === +S.cab.hooks));
+}
+function renderCabinetMatch() {
+  const t = parseFloat(S.cab.door), v = L.matchVariant(cat.cabinet.variants, t), box = $('cab-match');
+  box.classList.toggle('no', !v);
+  if (v) {
+    const p = v.params;
+    box.innerHTML = `<b>${esc(v.id)}</b> fits your ${U.fmt(t)} door<div class="small">Fits doors ${U.fmt(v.window[0])}–${U.fmt(v.window[1])}. ${esc(v.covers)}</div>` +
+      `<div class="small">As sold: ${p.hooks} hooks, ${U.fmt(p.projection)} projection${+p.hooks > 1 ? `, ${U.fmt(p.spacing)} spacing` : ''}.</div><button class="alt" id="cab-exact">Preview ${esc(v.id)} exactly as sold</button>`;
+    $('cab-exact').onclick = () => { Object.assign(S.cab, { door: v.params.door, projection: v.params.projection, hooks: v.params.hooks, spacing: v.params.spacing }); syncCabinet(); onCabinetChange(); };
+    setOrder(`1× ${v.id}`, `Get ${v.id}`);
+  } else {
+    box.innerHTML = `<b>No variant fits</b><div class="small">${esc(L.noFitMessage(cat.cabinet.variants, t))}</div>`; setOrder('', null);
+  }
+}
+function onCabinetChange() { renderCabinetMatch(); debounced('prev', () => loadPreview(L.cabinetPath(S.cab))); }
+
+// ---------- Over-door tab ----------
+function odRange() {
+  const w = cat.overDoor.variants.map((v) => v.window).flat(), lo = Math.min(...w), hi = Math.max(...w);
+  return cat.overDoor.doorRange || [Math.floor(lo - 5), Math.ceil(hi + 5)];
+}
+function buildOverDoor() {
+  const od = cat.overDoor; if (!od) { $('panel-od').innerHTML = '<div class="card"><b>Over-door catalog unavailable</b><p class="small">This backend did not return over-door products. Try another backend.</p></div>'; return; }
+  const [lo, hi] = odRange(); S.od.door = od.defaultDoor ?? Math.round((od.variants[0].window[0] + od.variants[0].window[1]) / 2);
+  for (const id of ['od-door-r', 'od-door']) { $(id).min = lo; $(id).max = hi; $(id).value = id === 'od-door' ? U.fmtNum(S.od.door) : S.od.door; }
+  $('od-door-r').step = '0.1';
+  if ($('od-door')) { $('od-door').min = U.fmtNum(lo); $('od-door').max = U.fmtNum(hi); $('od-door').step = U.unit === 'in' ? '0.05' : '0.1'; }
+  for (const id of ['od-door-r', 'od-door']) $(id).addEventListener('input', (e) => { S.od.door = id === 'od-door' ? U.toMM(e.target.value) : +e.target.value; if (id === 'od-door') $('od-door-r').value = S.od.door; else if (document.activeElement !== $('od-door')) $('od-door').value = U.fmtNum(S.od.door); reframe = true; onOverDoorChange(); });
+  document.querySelectorAll('#od-mode button').forEach((b) => b.onclick = () => { S.od.mode = b.dataset.mode; reframe = true; onOverDoorChange(); });
+  if (od.kit) {
+    const k = od.kit, n = []; for (let i = k.rail.minCount; i <= k.rail.maxCount; i++) n.push(i);
+    $('kit-rails').innerHTML = n.map((i) => `<button data-n="${i}">${i}</button>`).join('');
+    document.querySelectorAll('#kit-rails button').forEach((b) => b.onclick = () => setRails(+b.dataset.n));
+    S.od.rails = Math.min(2, k.rail.maxCount); S.od.pegs = L.defaultPegs(L.availableRungs(k.rungs, S.od.rails), k.peg.max);
+  }
+}
+function setRails(n) {
+  const k = cat.overDoor.kit, was = S.od.pegs; S.od.rails = n;
+  const r = L.prunePegs(was, k.rungs, n, k.peg.max); S.od.pegs = r.pegs; reframe = true; onOverDoorChange();
+  if (r.removed.length) $('kit-peg-note').textContent = `Removed the peg at ${r.removed.join(', ')} mm: it needs more rails.`;
+}
+function renderRungs() {
+  const k = cat.overDoor.kit, avail = L.availableRungs(k.rungs, S.od.rails), ok = new Set(avail.map((r) => r.mm));
+  const groups = new Map(); for (const r of k.rungs) { if (!groups.has(r.rail)) groups.set(r.rail, []); groups.get(r.rail).push(r); }
+  $('kit-rungs').innerHTML = [...groups].map(([rail, rs]) => `<div class="small" style="margin-top:8px">${rail === 0 ? 'On the saddle' : 'Rail ' + rail}</div><div class="chips">` +
+    rs.map((r) => `<button data-mm="${r.mm}" class="${S.od.pegs.includes(r.mm) ? 'on' : ''}" ${ok.has(r.mm) ? '' : 'disabled'} aria-pressed="${S.od.pegs.includes(r.mm)}">${U.fmtNum(r.mm)}</button>`).join('') + '</div>').join('');
+  $('kit-rungs').querySelectorAll('button').forEach((b) => b.onclick = () => {
+    const res = L.togglePeg(S.od.pegs, +b.dataset.mm, avail, k.peg.max);
+    $('kit-peg-note').textContent = res.error || 'Pegs are optional. Tap a position to add or remove a peg.';
+    S.od.pegs = res.pegs; onOverDoorChange();
+  });
+  const reach = L.reachRange(avail); $('kit-reach').textContent = reach ? `With ${S.od.rails} rail${S.od.rails > 1 ? 's' : ''}, pegs can sit from ${U.fmt(reach[0])} to ${U.fmt(reach[1])} below the door top.` : '';
+  document.querySelectorAll('#kit-rails button').forEach((b) => b.classList.toggle('on', +b.dataset.n === S.od.rails));
+}
+function onOverDoorChange() {
+  const od = cat.overDoor; if (!od) return;
+  const t = parseFloat(S.od.door), v = L.matchVariant(od.variants, t), box = $('od-match'), modeCard = $('od-mode-card');
+  box.classList.toggle('no', !v); modeCard.hidden = !v;
+  if (!v) {
+    box.innerHTML = `<b>No variant fits</b><div class="small">${esc(L.noFitMessage(od.variants, t))}</div>`; setOrder('', null);
+    $('msgs').innerHTML = ''; $('dims').innerHTML = ''; fadeMesh(true); $('status').textContent = ''; inflight?.abort(); return;
+  }
+  const kitOk = !!(od.kit && L.matchSaddle(od.kit.saddles, t));
+  if (!kitOk && S.od.mode === 'kit') S.od.mode = 'onepiece';
+  document.querySelectorAll('#od-mode button').forEach((b) => { b.classList.toggle('on', b.dataset.mode === S.od.mode); if (b.dataset.mode === 'kit') b.disabled = !kitOk; });
+  $('od-mode-note').textContent = S.od.mode === 'kit' ? 'Small parts that snap together with no tools; hooks can sit far down the door.' : 'One printed piece with hooks at the very top of the door.';
+  $('kit-builder').hidden = S.od.mode !== 'kit';
+  box.innerHTML = `<b>${esc(v.id)}</b> fits your ${U.fmt(t)} door<div class="small">Fits doors ${U.fmt(v.window[0])}–${U.fmt(v.window[1])}. ${esc(v.covers)}</div>`;
+  if (S.od.mode === 'kit') {
+    const k = od.kit, sad = L.matchSaddle(k.saddles, t); renderRungs();
+    const bom = L.kitBom({ saddleId: sad.id, railId: k.rail.id, pegId: k.peg.id, rails: S.od.rails, pegs: S.od.pegs });
+    setOrder(bom.text, 'Get this kit');
+    debounced('prev', () => loadPreview(L.kitPath({ saddle: sad.id, rails: S.od.rails, pegs: S.od.pegs })));
+  } else {
+    setOrder(`1× ${v.id}`, `Get ${v.id}`);
+    debounced('prev', () => loadPreview(L.overDoorPath(v.id), { flipToUse: v.orientation === 'as_printed' }));
+  }
+}
+
+// ---------- tabs ----------
+function selectTab(tab) {
+  S.tab = tab; reframe = true; inflight?.abort();
+  for (const [id, name] of [['tab-cabinet', 'cabinet'], ['tab-od', 'od']]) $(id).setAttribute('aria-selected', String(name === tab));
+  $('panel-cabinet').hidden = tab !== 'cabinet'; $('panel-od').hidden = tab !== 'od';
+  $('msgs').innerHTML = ''; $('dims').innerHTML = ''; $('cta-note').textContent = "Checkout isn't connected yet.";
+  clearMesh(); tab === 'cabinet' ? onCabinetChange() : onOverDoorChange();
+}
+$('tab-cabinet').onclick = () => selectTab('cabinet'); $('tab-od').onclick = () => selectTab('od');
+
+// ---------- boot: /api/catalog is the single source; /api/config only as a cabinet-only fallback ----------
+async function boot() {
+  try {
+    const r = await api('/api/catalog'); if (!r.ok) throw new Error(`catalog HTTP ${r.status}`);
+    cat = L.normalizeCatalog(await r.json());
+  } catch (e) {
+    try {   // older backend: cabinet-only, no variant matching possible
+      const c = await (await api('/api/config')).json();
+      cat = { envelope: c.envelope, cabinet: { limits: c.limits, defaults: c.defaults, variants: [] }, overDoor: null };
+      addMsg('warn', 'This backend has no product catalog yet, so sizes cannot be matched. Showing the basic cabinet explorer only.');
+    } catch { $('status').textContent = 'Could not reach the server'; addMsg('err', `Could not load the catalog from ${BACKEND || 'this site'}: ${e.message}`); return; }
+  }
+  buildCabinet(); buildOverDoor(); selectTab('cabinet');
+}
+boot();

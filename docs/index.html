@@ -1,41 +1,92 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cabinet Hanger Configurator</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hanger Designer</title>
 <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.170.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.170.0/examples/jsm/"}}</script>
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2230;--mute:#6b7384;--line:#e2e5ec;--acc:#2f6fed;--err:#c62f3b;--warn:#9a6a00}
-@media(prefers-color-scheme:dark){:root{--bg:#14171d;--card:#1d2129;--ink:#e8ebf2;--mute:#99a1b3;--line:#2c323d;--acc:#6a9bff;--err:#ff7b86;--warn:#e3b341}}
-*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,sans-serif;background:var(--bg);color:var(--ink)}
-header{padding:18px 20px 6px}h1{font-size:20px;margin:0}header p{margin:2px 0 0;color:var(--mute);font-size:13px}
-main{display:grid;grid-template-columns:320px 1fr;gap:16px;padding:14px 20px 24px;max-width:1100px;margin:auto}
-@media(max-width:760px){main{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
-label{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:12px}
-.row{display:flex;gap:10px;align-items:center}.row input[type=range]{flex:1;accent-color:var(--acc)}
-input[type=number]{width:72px;padding:5px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
-.seg{display:flex;gap:6px}.seg button{flex:1;padding:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;cursor:pointer}
-.seg button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
-#view{height:420px;border-radius:12px;border:1px solid var(--line);background:var(--card);position:relative;overflow:hidden}
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2230;--mute:#6b7384;--line:#e2e5ec;--acc:#2f6fed;--err:#c62f3b;--warn:#9a6a00;--ok:#1b7a43}
+@media(prefers-color-scheme:dark){:root{--bg:#14171d;--card:#1d2129;--ink:#e8ebf2;--mute:#99a1b3;--line:#2c323d;--acc:#6a9bff;--err:#ff7b86;--warn:#e3b341;--ok:#58c98a}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.45 system-ui,sans-serif;background:var(--bg);color:var(--ink);padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+header{padding:14px 16px 4px}h1{font-size:19px;margin:0}header p{margin:2px 0 0;color:var(--mute);font-size:13px}
+#backend{font-size:12px;color:var(--mute);margin-top:2px}
+nav{display:flex;gap:8px;padding:8px 16px}
+nav button{flex:1;min-height:44px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;font:inherit;cursor:pointer}
+nav button[aria-selected=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+main{display:grid;grid-template-columns:1fr;gap:12px;padding:6px 16px 28px;max-width:1100px;margin:auto}
+#viewbox{position:sticky;top:0;z-index:5;background:var(--bg);padding:4px 0 6px}
+#view{height:34vh;min-height:230px;max-height:420px;border-radius:12px;border:1px solid var(--line);background:var(--card);position:relative;overflow:hidden;touch-action:pan-y}
 #view canvas{display:block;width:100%;height:100%}
-#status{position:absolute;left:10px;top:8px;font-size:12px;color:var(--mute)}
+#status{position:absolute;left:10px;top:8px;font-size:12px;color:var(--mute);pointer-events:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.small{font-size:12px;color:var(--mute);margin:6px 0 0}
+label{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);margin-top:12px}
+.row{display:flex;gap:10px;align-items:center}.row input[type=range]{flex:1;accent-color:var(--acc);min-height:32px}
+input[type=number]{width:84px;min-height:40px;padding:6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.seg{display:flex;gap:6px;margin-top:6px}.seg button{flex:1;min-height:44px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;font:inherit;cursor:pointer}
+.seg button.on{background:var(--acc);border-color:var(--acc);color:#fff}.seg button:disabled{opacity:.45}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chips button{min-width:56px;min-height:44px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;font:inherit;cursor:pointer}
+.chips button.on{background:#d83;border-color:#d83;color:#111}.chips button:disabled{opacity:.35}
+h3{font-size:14px;margin:14px 0 0;color:var(--mute);font-weight:600}
+.match{border-left:4px solid var(--ok)}.match.no{border-left-color:var(--err)}
+.match b{font-size:17px}
+button.cta{margin-top:10px;width:100%;min-height:48px;border-radius:12px;border:0;background:var(--acc);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+button.cta:disabled{opacity:.5}button.alt{margin-top:8px;min-height:44px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;cursor:pointer}
 dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:0;font-size:14px}dt{color:var(--mute)}dd{margin:0;font-variant-numeric:tabular-nums}
-.msg{font-size:13px;margin:8px 0 0}.err{color:var(--err)}.warn{color:var(--warn)}
-.small{font-size:12px;color:var(--mute);margin-top:10px}
-button.act{margin-top:8px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
-.side{display:flex;flex-direction:column;gap:14px}
+.msg{font-size:13px;margin:8px 0 0}.err{color:var(--err)}.warn{color:var(--warn)}.bom{font-weight:600;margin-top:6px}
+#unit-toggle button{border:1px solid var(--line);background:var(--card);color:var(--mute);border-radius:6px;padding:2px 8px;font:inherit;font-size:13px;cursor:pointer}
+#unit-toggle button[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+[hidden]{display:none!important}
+@media(min-width:900px){
+ main{grid-template-columns:380px 1fr;grid-template-areas:"controls view" "readout view";align-items:start}
+ #viewbox{grid-area:view;top:8px}#view{height:520px;max-height:none}#controls{grid-area:controls}#readout{grid-area:readout}
+}
 </style></head><body>
-<header><h1>Cabinet Hanger Configurator</h1><p>v1 prototype · all dimensions in mm · preview only, not a production file</p></header>
+<header><h1>Hanger Designer</h1><p>Pick the hanger that fits your door. <span id="unit-toggle"><button id="unit-mm" aria-pressed="true">mm</button> | <button id="unit-in" aria-pressed="false">in</button></span></p><div id="backend"></div></header>
+<nav role="tablist" aria-label="Product">
+ <button role="tab" id="tab-cabinet" aria-selected="true" aria-controls="panel-cabinet">Cabinet</button>
+ <button role="tab" id="tab-od" aria-selected="false" aria-controls="panel-od">Over-door</button>
+</nav>
 <main>
-<div class="side">
- <div class="card" id="controls"></div>
- <div class="card"><dl id="dims"></dl><div id="msgs"></div></div>
-</div>
-<div><div id="view"><div id="status">Loading…</div></div>
-<p class="small">Preview is a coarse approximation of the geometry. Orientation: as printed (upright). Hook strength and load capacity are untested.</p>
-<div id="dev" class="card" style="display:none;margin-top:12px"><b>Developer</b>
-<div class="small" style="margin-top:2px">Generates the production STL on the server into <code>private_output/</code>. The file is never sent to the browser.</div>
-<button class="act" id="prod">Generate production STL (server-side)</button><div id="prodout" class="msg"></div></div></div>
+ <div id="viewbox"><div id="view"><div id="status">Loading…</div></div>
+  <p class="small">Preview only, not a production file. Coarse approximation of the real part. Drag to rotate, pinch or scroll to zoom.</p></div>
+
+ <div id="controls">
+  <section id="panel-cabinet" role="tabpanel" aria-labelledby="tab-cabinet">
+   <div class="card">
+    <div id="cab-controls"></div>
+    <p class="small">The sliders let you explore shapes. You can only buy the fixed sizes below, exactly as sold.</p>
+   </div>
+   <div class="card match" id="cab-match" style="margin-top:12px" aria-live="polite"></div>
+  </section>
+
+  <section id="panel-od" role="tabpanel" aria-labelledby="tab-od" hidden>
+   <div class="card">
+    <label for="od-door"><span>Your door thickness (measure the top edge)</span></label>
+    <div class="row"><input type="range" id="od-door-r" aria-label="Door thickness slider"><input type="number" id="od-door" step="0.1" inputmode="decimal"></div>
+   </div>
+   <div class="card match" id="od-match" style="margin-top:12px" aria-live="polite"></div>
+   <div class="card" id="od-mode-card" style="margin-top:12px" hidden>
+    <div style="font-size:14px;color:var(--mute)">Choose a style</div>
+    <div class="seg" id="od-mode"><button data-mode="onepiece">One-piece</button><button data-mode="kit">Modular kit</button></div>
+    <p class="small" id="od-mode-note"></p>
+    <div id="kit-builder" hidden>
+     <h3>Rails (drop length)</h3><div class="seg" id="kit-rails"></div><p class="small" id="kit-reach"></p>
+     <h3>Peg positions (mm below the door top)</h3><div id="kit-rungs"></div>
+     <p class="small" id="kit-peg-note">Pegs are optional. Tap a position to add or remove a peg.</p>
+    </div>
+   </div>
+  </section>
+ </div>
+
+ <div id="readout" class="card">
+  <div id="order" class="bom"></div>
+  <dl id="dims"></dl>
+  <div id="msgs"></div>
+  <button class="cta" id="cta" disabled>Choose a size</button>
+  <p class="small" id="cta-note">Checkout isn't connected yet.</p>
+ </div>
 </main>
 <script type="module" src="app.js"></script>
 </body></html>
